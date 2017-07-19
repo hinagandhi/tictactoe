@@ -1,14 +1,18 @@
 {
   "name": "tictactoe",
   "homepage": "https://github.com/hinagandhi/tictactoe",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "devDependencies":{
+   "gh-pages": "^1.0.0" 
+  },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "server": "nodemon --watch server --exec babel-node -- server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
+    "predeploy": "npm run server",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
