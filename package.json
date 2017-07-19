@@ -8,12 +8,10 @@
    "gh-pages": "^1.0.0" 
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node npm run server",
     "build": "react-scripts build",
     "server": "nodemon --watch server --exec babel-node -- server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run server",
-    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
