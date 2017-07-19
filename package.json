@@ -1,6 +1,6 @@
 {
   "name": "tictactoe",
-  "homepage": "https://github.com/hinagandhi/tictactoe",
+  "homepage": "http://hinagandhi.github.io/tictactoe",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,10 @@
    "gh-pages": "^1.0.0" 
   },
   "scripts": {
-    "start": "node npm run server",
-    "build": "react-scripts build",
+    "start": "nodemon --exec babel-node server/index.js",
     "server": "nodemon --watch server --exec babel-node -- server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+   
   },
   "keywords": [],
   "author": "",
