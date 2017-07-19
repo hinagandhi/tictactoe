@@ -17,17 +17,12 @@ app.use(webpackMiddleware(compiler,{
 }));
 app.use(webpackHotMiddleware(compiler));
 
-app.get('/*', (req,res) => { // request to catch all routes
+app.get('/', (req,res) => { // request to catch all routes
    res.sendFile(path.join(__dirname, './index.html')); //redirect to index page
 });
 
 // running application on localhost:3000
 
-//app.listen(3000, () => console.log('Running on localhost:3000'))
-app.listen(port, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(`server started port: ${port}`);
-  }
+app.listen(port,function(){
+    console.log('Server is up and running on :' + port)
 });
