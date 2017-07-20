@@ -19,8 +19,8 @@
     "webpack-hot-middleware": "^2.18.2"
   },
   "scripts": {
-    "start": "babel-node server/index.js",
-    "server": "nodemon --watch server --exec babel-node -- server/index.js",
+    "start": "babel-node index.js",
+    "server": "nodemon --watch server --exec babel-node -- index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
