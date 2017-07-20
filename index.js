@@ -7,7 +7,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from './webpack.config.dev';
 
 let app = express(); // initialize our app as express for all the functions
-let port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 // configuring webpackmiddleware that uses webpackConfig
 const compiler = webpack(webpackConfig);
 app.use(webpackMiddleware(compiler,{
@@ -15,11 +15,7 @@ app.use(webpackMiddleware(compiler,{
 	publicPath: webpackConfig.output.publicPath,
 	noInfo: true
 }));
-app.use(webpackHotMiddleware(compiler));
 
-// app.get('/', (req,res) => { // request to catch all routes
-//    res.sendFile(path.join(__dirname, './index.html')); //redirect to index page
-// });
 app.use( function(req, res, next){
     if(req.headers['x-forwarded-proto'] === 'https'){
         res.redirect("http://" + req.hostname + req.url);
